@@ -68,23 +68,16 @@ int main() {
     }
     cout << endl;
 
-    cout << "Cac nam co cung so nguoi sinh ra:" << endl;
-    for (int i = 0; i < n; ++i) {
-        int current_count = births[i];
-        bool printed = false;
-        cout <<"Co "<< current_count<<" nguoi sinh ra" << ": ";
-        
-        for (int j = 0; j < n; ++j) {
-            if (births[j] == current_count) {
-                cout <<years[j] << " ";
-                printed = true;
-            }
-        }
+    int input_count;
+    cout << "Nhap so nguoi sinh ra muon tim: ";
+    cin >> input_count;
 
-        if (printed) {
-            cout << endl;
+    cout << "Cac nam co " << input_count << " nguoi sinh ra: ";
+    bool found = false; 
+    for (int i = 0; i < n; ++i) {
+        if (births[i] == input_count) {
+            cout << years[i] << " ";
+            found = true;
         }
     }
-
-    return 0;
 }
