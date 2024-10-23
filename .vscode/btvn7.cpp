@@ -73,11 +73,14 @@ int main() {
     cin >> input_count;
 
     cout << "Cac nam co " << input_count << " nguoi sinh ra: ";
-    bool found = false; 
+   int found = false;
     for (int i = 0; i < n; ++i) {
         if (births[i] == input_count) {
             cout << years[i] << " ";
-            found = true;
-        }
+            found = true ;
+        } 
     }
-}
+        if( !found ) {
+            cout <<"Khong ton tai nam co "<<input_count<<" nguoi sinh ra";
+            }
+    }
